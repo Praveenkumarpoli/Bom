@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            margin: 0;
+            padding: 20px;
+        }
+
+        button {
+            padding: 10px;
+            margin: 10px;
+            font-size: 1.5rem;
+            background-color: #007BFF;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+
+        button:hover {
+            background-color: #0056b3;
+        }
+
+        button.disabled {
+            background-color: #ccc;
+            cursor: not-allowed;
+        }
+
+        #output {
+            padding: 20px;
+            background-color: #ffffff;
+            border: 2px solid #007BFF;
+            border-radius: 5px;
+            min-height: 100px;
+            margin: 10px 0;
+            font-size: 2rem;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            animation: fadeIn 0.5s ease;
+        }
+
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+            }
+            to {
+                opacity: 1;
+            }
+        }
+
+        @keyframes slideIn {
+            from {
+                transform: translateY(20px);
+                opacity: 0;
+            }
+            to {
+                transform: translateY(0);
+                opacity: 1;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <button id="openBtn" onclick="openWindow()">Open</button>
+    <button id="closeBtn" class="disabled" onclick="closeWindow()" disabled>Close</button>
+    <button id="resizeBtn" class="disabled" onclick="resizeWindow()" disabled>Resize</button>
+    <button id="scrollBtn" class="disabled" onclick="scrollWindow()" disabled>Scroll</button>
+    <button id="promptBtn" onclick="promptWindow()">Prompt</button>
+    <button id="confirmBtn" class="disabled" onclick="confirmWindow()" disabled>Confirm</button>
+    <button id="alertBtn" onclick="alertWindow()">Alert</button>
+    <button id="printBtn" onclick="printWindow()">Print</button>
+    <button id="clearBtn" onclick="clearOutput()">Clear Output</button>
+    <div id="output"></div>
+
+    <script src="./script.js">
+    </script>
+</body>
+
+</html>
